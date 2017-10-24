@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 MAINTAINER Shaun McCloud<git@smccloud.com>
-LABEL version="v0.11.0.0"
+LABEL version="v0.11.1.0"
 
 # Copy shell scripts
 ADD run.sh /
@@ -26,7 +26,7 @@ RUN apt-get install -y wget\
   libgtest-dev\
   doxygen\
   graphviz
-RUN cd /usr/src/gtest && sudo cmake . && make && mv libg* /usr/lib/
+RUN cd /usr/src/gtest && cmake . && make && mv libg* /usr/lib/
 RUN wget -O /monero-linux-x64-v0.11.0.0.tar.bz2 https://downloads.getmonero.org/cli/monero-linux-x64-v0.11.0.0.tar.bz2
 RUN tar xvf /monero-linux-x64-v0.11.0.0.tar.bz2
 RUN rm -f /monero-linux-x64-v0.11.0.0.tar.bz2
