@@ -1,3 +1,6 @@
+# Build status
+[![Build Status](https://travis-ci.org/smccloud/monero-node.svg?branch=master)](https://travis-ci.org/smccloud/monero-node)
+
 # monero-node
 A full node for Monero.
 
