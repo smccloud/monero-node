@@ -1,4 +1,8 @@
 sudo: required
 
+language: shell
+
 services:
   - docker
+
+script: docker build -t smccloud/monero-node .
