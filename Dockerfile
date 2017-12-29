@@ -5,8 +5,7 @@ LABEL version="v0.11.1.0"
 # Copy shell scripts
 ADD run.sh /
 
-# Run the bootstrap script
-#RUN bash /bootstrap.sh
+# Setup the image
 RUN apt-get update
 RUN apt-get install -y wget bzip2
 RUN wget -O /monero-linux-x64-v0.11.1.0.tar.bz2 https://downloads.getmonero.org/cli/monero-linux-x64-v0.11.1.0.tar.bz2
