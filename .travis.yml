@@ -9,4 +9,5 @@ script: docker build -t smccloud/monero-node .
 
 after_success:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-  - docker push smccloud/monero-node:latest
+  - docker tag smccloud/monero-node smccloud/monero-node:v0.11.1.0
+  - docker push smccloud/monero-node:v0.11.1.0
