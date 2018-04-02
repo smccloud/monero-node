@@ -11,7 +11,7 @@ RUN apt-get install -y wget bzip2
 RUN wget -O /monero-linux-x64-v0.12.0.0.tar.bz2 https://github.com/monero-project/monero/archive/v0.12.0.0.tar.gz
 RUN tar xvf /monero-linux-x64-v0.12.0.0.tar.bz2
 RUN rm -f /monero-linux-x64-v0.12.0.0.tar.bz2
-RUN mv /monero-v0.12.10.0 /monero
+RUN mv /monero-0.12.0.0 /monero
 RUN mkdir -p /monero/blockchain
 
 # Stop the container
