@@ -21,6 +21,6 @@ STOPSIGNAL SIGTERM
 EXPOSE 18080 18081
 
 # Expose a volume for blockchain storage
-EXPOSE ["/blockchain"]
+VOLUME ["/blockchain"]
 
 CMD ["/bin/bash", "/run.sh"]
