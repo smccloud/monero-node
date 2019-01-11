@@ -11,14 +11,16 @@ RUN apt-get install -y wget bzip2
 RUN wget -O /monero-linux-x64-v0.13.0.4.tar.bz2 https://github.com/monero-project/monero/releases/download/v0.13.0.4/monero-linux-x64-v0.13.0.4.tar.bz2
 RUN tar xvf /monero-linux-x64-v0.13.0.4.tar.bz2
 RUN rm -f /monero-linux-x64-v0.13.0.4.tar.bz2
-RUN mv /monero-0.13.0.4 /monero
+RUN mv /monero-v0.13.0.4 /monero
 RUN mkdir -p /blockchain
 
 # Stop the container
 STOPSIGNAL SIGTERM
 
 # Expose the two ports needed for the Monero daemon
-EXPOSE 18080
-EXPOSE 18081
+EXPOSE 18080 18081
+
+# Expose a volume for blockchain storage
+EXPOSE ["/blockchain"]
 
 CMD ["/bin/bash", "/run.sh"]
