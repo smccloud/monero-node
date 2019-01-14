@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu
 MAINTAINER Shaun McCloud<git@smccloud.com>
 LABEL version="v0.13.0.4"
 
