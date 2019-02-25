@@ -23,4 +23,5 @@ EXPOSE 18080 18081
 # Expose a volume for blockchain storage
 VOLUME ["/blockchain"]
 
-CMD ["/bin/bash", "/run.sh"]
+#CMD ["/bin/bash", "/run.sh"]
+ENTRYPOINT ["/monero/monerod"," --data-dir=/blockchain --block-sync-size=20 --rpc-bind-ip=0.0.0.0 --restricted-rpc --confirm-external-bind --detach --log-file=/blockchain/bitmonero.log"]
